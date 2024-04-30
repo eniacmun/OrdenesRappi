@@ -37,7 +37,6 @@ public class InicioSesion {
             
             if (request.getParameterMap().size() <= 0 && !request.getMethod().equals("OPTIONS")) {
                 String json = getBody(request, response);
-                //String jsonUber = obtieneJsonUber(request, response);
                 String jsonRappi = validaJsonRappi(json);
                 if (!jsonRappi.isEmpty()) {
                     AppRappi.HandleRequest(jsonRappi, request, response);

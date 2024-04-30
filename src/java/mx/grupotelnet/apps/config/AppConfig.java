@@ -17,16 +17,16 @@ public class AppConfig {
     // Logger
     private static final Logger log = Logger.getLogger(AppConfig.class);
     
-    // Archivo de configuración externo
+    // Archivo de configuraciï¿½n externo
     //private static final String ARCHIVO_CONFIG = "C:/pedidosenlinea/config/ws.properties";
     private static final String ARCHIVO_CONFIG = "C:/pedidosenlinearappi/config/ws.properties";
         
-    // Configuración default del correo
+    // Configuraciï¿½n default del correo
     private static final String EMAIL_DEFAULT_HOST       = "smtp.gmail.com";
     private static final String EMAIL_DEFAULT_PORT       = "587";
     private static final String EMAIL_DEFAULT_ENABLE_SSL = "true";
-    private static final String EMAIL_DEFAULT_USER       = "sistemas@grupotelnet.com.mx";
-    private static final String EMAIL_DEFAULT_PASSWORD   = ".gP0T3l.4dm.156#";
+    private static final String EMAIL_DEFAULT_USER       = "";
+    private static final String EMAIL_DEFAULT_PASSWORD   = "";
     private static final String EMAIL_DEFAULT_AUTH       = "true";
 
     // Instancia de la clase
@@ -43,13 +43,13 @@ public class AppConfig {
             input = new FileInputStream(FilenameUtils.normalize(ARCHIVO_CONFIG));        
             config.load(input);
         } catch(IOException e) {
-            log.error("Error al cargar el archivo de configuración de la app: " + e.getMessage(), e);
+            log.error("Error al cargar el archivo de configuraciï¿½n de la app: " + e.getMessage(), e);
         } finally {
             if (input != null) {
                 try {
                     input.close();
                 } catch (IOException ex) {
-                    log.error("Error al cerrar el archivo de configuración de la app: " + ex.getMessage(), ex);
+                    log.error("Error al cerrar el archivo de configuraciï¿½n de la app: " + ex.getMessage(), ex);
                 }
             }
         }
